@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-kenya-black: #000000;
+  --color-kenya-red: #BB0613;
+  --color-kenya-green: #006600;
+  --color-kenya-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-kenya-black antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.kenya-gradient {
+  background: linear-gradient(to right, var(--color-kenya-black) 25%, var(--color-kenya-red) 25% 50%, var(--color-kenya-green) 50% 75%, var(--color-kenya-white) 75%);
+}
+
+.kenya-border-top {
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, #000000 25%, #BB0613 25% 50%, #006600 50% 75%, #FFFFFF 75%) 1;
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
